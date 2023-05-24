@@ -159,3 +159,18 @@ variable "aft_feature_delete_default_vpcs_enabled" {
     error_message = "Valid values for var: aft_feature_delete_default_vpcs_enabled are (true, false)."
   }
 }
+
+#########################################
+# New Relic
+#########################################
+variable "newrelic_api_key" {
+  type = string
+}
+
+variable "newrelic_region" {
+  type = string
+}
+
+variable "newrelic_account_id" {
+  type = string
+}

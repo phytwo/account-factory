@@ -9,7 +9,7 @@ module "backend" {
 }
 
 module "aft_pipeline" {
-  source = "github.com/phytwo/control_tower_account_factory?ref=v1.0.0"
+  source = "github.com/phytwo/control_tower_account_factory?ref=v2.0.0"
   # Required Variables
   ct_management_account_id    = var.ct_management_account_id
   log_archive_account_id      = var.log_archive_account_id
@@ -33,4 +33,9 @@ module "aft_pipeline" {
   aft_feature_cloudtrail_data_events      = var.aft_feature_cloudtrail_data_events
   aft_feature_enterprise_support          = var.aft_feature_enterprise_support
   aft_feature_delete_default_vpcs_enabled = var.aft_feature_delete_default_vpcs_enabled
+
+  # NewRelic
+  newrelic_api_key    = var.newrelic_api_key
+  newrelic_region     = var.newrelic_region
+  newrelic_account_id = var.newrelic_account_id
 }

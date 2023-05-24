@@ -5,8 +5,8 @@ data "aws_caller_identity" "current" {
 resource "random_string" "bucket_name" {
   length  = 16
   special = false
-  lower = true
-  upper = false
+  lower   = true
+  upper   = false
   numeric = false
 }
 
