@@ -3,7 +3,7 @@ module "backend" {
     aws.primary_region   = aws.aft_management
     aws.secondary_region = aws.tf_backend_secondary_region
   }
-  source           = "./modules/backend"
+  source           = "git@github.com:phytwo/backend"
   primary_region   = var.ct_home_region
   secondary_region = var.tf_backend_secondary_region
 }
