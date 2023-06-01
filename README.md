@@ -1,3 +1,4 @@
+[![Terraform](https://github.com/phytwo/aft-bootstrap/actions/workflows/terraform.yml/badge.svg?branch=main)](https://github.com/phytwo/aft-bootstrap/actions/workflows/terraform.yml)
 ## aft-workshop-sample
 
 Sample repository and customization for AWS Control Tower Account Factory for Terraform (AFT).
