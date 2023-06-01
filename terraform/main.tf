@@ -9,7 +9,7 @@ module "backend" {
 }
 
 module "aft_pipeline" {
-  source = "github.com/phytwo/control_tower_account_factory?ref=v2.0.2"
+  source = "git@github.com:phytwo/control_tower_account_factory.git?ref=v2.0.5"
   # Required Variables
   ct_management_account_id    = var.ct_management_account_id
   log_archive_account_id      = var.log_archive_account_id
