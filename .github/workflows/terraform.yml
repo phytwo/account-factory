@@ -38,3 +38,22 @@ jobs:
     - name: Terraform Apply
       if: github.ref == 'refs/heads/main'
       run: terraform -chdir='./terraform' apply -auto-approve -input=false
+      env:
+        TF_VAR_ct_management_account_id: ${{ vars.CT_MANAGEMENT_ACCOUNT_ID }}
+        TF_VAR_log_archive_account_id: ${{ vars.LOG_ARCHIVE_ACCOUNT_ID }}
+        TF_VAR_audit_account_id: ${{ vars.AUDIT_ACCOUNT_ID }}
+        TF_VAR_aft_management_account_id: ${{ vars.AFT_MANAGEMENT_ACCOUNT_ID }}
+        TF_VAR_ct_home_region: ${{ vars.CT_HOME_REGION }}
+        TF_VAR_tf_backend_secondary_region: ${{ vars.TF_BACKEND_SECONDARY_REGION }}
+        TF_VAR_vcs_provider: ${{ vars.VCS_PROVIDER }}
+        TF_VAR_account_request_repo_name: ${{ vars.ACCOUNT_REQUEST_REPO_NAME }}
+        TF_VAR_global_customizations_repo_name: ${{ vars.GLOBAL_CUSTOMIZATIONS_REPO_NAME }}
+        TF_VAR_account_customizations_repo_name: ${{ vars.ACCOUNT_CUSTOMIZATIONS_REPO_NAME }}
+        TF_VAR_account_provisioning_customizations_repo_name: ${{ vars.ACCOUNT_PROVISIONING_CUSTOMIZATIONS_REPO_NAME }}
+        TF_VAR_aft_feature_cloudtrail_data_events: ${{ vars.AFT_FEATURE_CLOUDTRAIL_DATA_EVENTS }}
+        TF_VAR_aft_feature_enterprise_support: ${{ vars.AFT_FEATURE_ENTERPRISE_SUPPORT }}
+        TF_VAR_aft_feature_delete_default_vpcs_enabled: ${{ vars.AFT_FEATURE_DELETE_DEFAULT_VPCS_ENABLED }}
+        TF_VAR_newrelic_api_key: ${{ secrets.ACCOUNT_CUSTOMIZATIONS_REPO_NAME }}
+        TF_VAR_newrelic_region: ${{ vars.NEWRELIC_REGION }}
+        TF_VAR_newrelic_account_id: ${{ vars.NEWRELIC_ACCOUNT_ID }}
+
