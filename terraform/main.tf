@@ -3,13 +3,13 @@ module "backend" {
     aws.primary_region   = aws.aft_management
     aws.secondary_region = aws.tf_backend_secondary_region
   }
-  source           = "git@github.com:phytwo/backend"
+  source           = "github.com/phytwo/backend"
   primary_region   = var.ct_home_region
   secondary_region = var.tf_backend_secondary_region
 }
 
 module "aft_pipeline" {
-  source = "git@github.com:phytwo/control_tower_account_factory.git?ref=v2.0.5"
+  source = "github.com/phytwo/control_tower_account_factory"
   # Required Variables
   ct_management_account_id    = var.ct_management_account_id
   log_archive_account_id      = var.log_archive_account_id
