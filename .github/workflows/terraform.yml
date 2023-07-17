@@ -53,7 +53,7 @@ jobs:
         TF_VAR_aft_feature_cloudtrail_data_events: ${{ vars.AFT_FEATURE_CLOUDTRAIL_DATA_EVENTS }}
         TF_VAR_aft_feature_enterprise_support: ${{ vars.AFT_FEATURE_ENTERPRISE_SUPPORT }}
         TF_VAR_aft_feature_delete_default_vpcs_enabled: ${{ vars.AFT_FEATURE_DELETE_DEFAULT_VPCS_ENABLED }}
-        TF_VAR_newrelic_api_key: ${{ secrets.ACCOUNT_CUSTOMIZATIONS_REPO_NAME }}
+        TF_VAR_newrelic_api_key: ${{ secrets.TF_VAR_NEWRELIC_API_KEY }}
         TF_VAR_newrelic_region: ${{ vars.NEWRELIC_REGION }}
         TF_VAR_newrelic_account_id: ${{ vars.NEWRELIC_ACCOUNT_ID }}
 
